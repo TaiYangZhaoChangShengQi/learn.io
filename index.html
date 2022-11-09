@@ -32,20 +32,20 @@
 		</style>
 	</head>
 	<body style="background-color: #4DFFFF;padding-top: 400px">
-	    <div align="center" style="width: 100%;">
-	      <table>
-	        <tr>
-	          <td valign="middle">
-	            <a href="#" rel="external nofollow" id="JdownApp">安卓下载</a>
-	          </td>
-	        </tr>
-	        <tr>
-	          <td valign="middle">
-	            <a href="#" rel="external nofollow" id="JdownApp2" class="btn-warn">苹果下载</a>
-	          </td>
-	        </tr>
-	      </table>     
-	    </div>
+		<div id="main" align="center" style="width: 100%;">
+			<table>
+				<tr>
+					<td valign="middle">
+						<a href="#" rel="external nofollow" id="JdownApp">安卓下载</a>
+					</td>
+				</tr>
+				<tr>
+					<td valign="middle">
+						<a href="#" rel="external nofollow" id="JdownApp2" class="btn-warn">苹果下载</a>
+					</td>
+				</tr>
+			</table>     
+		</div>
 		<!-- 引入遮蔽层 -->
 		<div id="Mask" style="display:none;">
 			<div>点击右上角的 ···</div>
@@ -60,6 +60,7 @@
 	  if(isWeixin) {
 	    var SHOW = 0;
 	    document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
+			document.getElementById('main').style.display = SHOW % 2 == 1 ? 'none' : 'block';
 	  }
 	</script>
 </html>
