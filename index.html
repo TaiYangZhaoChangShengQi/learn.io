@@ -14,21 +14,22 @@
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 			}
-			.title, td {
-				line-height: 50px;
-				font-size: 40px;
-			} 
 			.title {
 				margin-top: 10px;
-				margin-bottom: 100px;
-				color: #ffffff;
-				font-size: 48px;
+				margin-bottom: 30px;
+				/* color: #ffffff; */
+				color: #FFD18F;
+				font-size: 52px;
 				font-weight: bold;
 				font-family: 'SimSun', 'Microsoft YaHei';
 			}
 			.icon1 {
 				width: 200px;
 				height: 200px;
+				margin-bottom: 10px;
+			}
+			.DL {
+				margin-bottom: 30px;
 			}  
 			a {
 				text-decoration: none;
@@ -72,23 +73,18 @@
 		<div id="app">
 			<div id="main" align="center" style="width: 100%;">
 				<img src="./icon.png" class="icon1" alt="">
-				<div class="title">智慧监管矫正对象APP</div>
-				<table>
-					<tr>
-						<td valign="middle">
-							<a :href="apkURL" rel="external nofollow" id="JdownApp2" class="btn-warn">
-								<img src="./download.jpg" alt="">
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td valign="middle">
-							<a href="#" rel="external nofollow" id="JdownApp2" class="btn-warn">
-								<img src="./apple.jpg" alt="">
-							</a>
-						</td>
-					</tr>
-				</table>     
+				<div class="title">智慧监管</div>
+				<div class="title">矫正对象APP</div>
+				<div class="DL">
+					<a :href="apkURL" rel="external nofollow" id="JdownApp2" class="btn-warn">
+						<img src="./download.jpg" alt="">
+					</a>
+				</div>
+				<div class="DL">
+					<a href="#" rel="external nofollow" id="JdownApp2" class="btn-warn">
+						<img src="./apple.jpg" alt="">
+					</a> 
+				</div>
 			</div>
 			<!-- 引入遮蔽层 -->
 			<div id="Mask">
