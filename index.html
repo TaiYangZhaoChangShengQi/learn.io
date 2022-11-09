@@ -8,7 +8,7 @@
 	
 		<style type="text/css">
 			body {
-				height: 1900px;
+				height: 2100px;
 				background-image: url('./img5.jpeg');
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -139,6 +139,10 @@
 	  var isWeixin = !!/MicroMessenger/i.test(ua);
 	  //如果使用的是微信自带浏览器，就打开蒙版
 	  if(isWeixin) {
+			window.onload = () => {
+				console.log('we');
+				document.getElementsByTagName("body")[0].style.height = document.body.scrollHeight+"px";
+			}
 	    var SHOW = 0;
 	    document.getElementById('Mask').style.display = ++SHOW % 2 == 1 ? 'block' : 'none';
 			document.getElementById('main').style.display = SHOW % 2 == 1 ? 'none' : 'block';
