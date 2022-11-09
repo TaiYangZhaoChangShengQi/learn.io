@@ -9,11 +9,14 @@
 		<style type="text/css">
 			body {
 				padding-top: 200px;
-				background-image: url('./img.png');
+				background-image: url('./img5.jpeg');
 				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
 			}
 			.title {
-				margin-bottom: 20px;
+				margin-bottom: 100px;
+				color: #ffffff;
 			}
 			.title, td {
 				line-height: 50px;
@@ -47,16 +50,21 @@
 	<body>
 		<div id="app">
 			<div id="main" align="center" style="width: 100%;">
-				<div class="title">矫正对象APP下载</div>
+				<img src="./icon.png" alt="">
+				<div class="title">智慧监管矫正对象APP</div>
 				<table>
 					<tr>
 						<td valign="middle">
-							<a :href="apkURL" rel="external nofollow" id="JdownApp2" class="btn-warn">安卓下载</a>
+							<a :href="apkURL" rel="external nofollow" id="JdownApp2" class="btn-warn">
+								<img src="./download.jpg" alt="">
+							</a>
 						</td>
 					</tr>
 					<tr>
 						<td valign="middle">
-							<a href="#" rel="external nofollow" id="JdownApp2" class="btn-warn">苹果下载</a>
+							<a href="#" rel="external nofollow" id="JdownApp2" class="btn-warn">
+								<img src="./apple.jpg" alt="">
+							</a>
 						</td>
 					</tr>
 				</table>     
