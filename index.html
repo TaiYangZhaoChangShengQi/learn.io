@@ -12,7 +12,6 @@
 				background-image: url('./img5.jpeg');
 				background-size: 100% 100%;
 				background-repeat: no-repeat;
-				background-attachment: fixed;
 			}
 			.title {
 				margin-top: 10px;
@@ -39,6 +38,11 @@
 				width: 350px;
 				height: 91px;
 				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+			}
+			.version {
+				font-size: 24px;
+				color: #ffffff;
+				font-family: 'SimSun', 'Microsoft YaHei';
 			}
 			#Mask {
 				position: absolute;
@@ -81,6 +85,9 @@
 						<img src="./download.jpg" alt="">
 					</a>
 				</div>
+				<div class="version">
+					版本信息：{{version}}
+				</div>
 			</div>
 			<!-- 引入遮蔽层 -->
 			<div id="Mask">
@@ -96,7 +103,8 @@
 			el:'#app',
 			data() {
 				return {
-					apkURL: null
+					apkURL: null,
+					version: null,
 				}
 			},
 			mounted() {
@@ -110,6 +118,7 @@
 					axios.get('http://43.139.124.241:8080/user/version').then(res => {
 						console.log(res)
 						this.apkURL = url1 + res.data.data.apkUrl
+						this.version = res.data.data.versionNo
 						console.log(this.apkURL)
 					}).catch(err => {
 						console.log(err);
