@@ -8,7 +8,7 @@
 	
 		<style type="text/css">
 			body {
-				height: 2300px;
+				/* height: 2300px; */
 				background-image: url('./img5.jpeg');
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -138,7 +138,7 @@
 	  var ua = navigator.userAgent;
 	  var isWeixin = !!/MicroMessenger/i.test(ua);
 		window.onload = () => {
-				console.log('we');
+				console.log(document.body.scrollHeight);
 				document.getElementsByTagName("body")[0].style.height = document.body.scrollHeight+"px";
 			}
 	  //如果使用的是微信自带浏览器，就打开蒙版
