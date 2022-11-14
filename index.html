@@ -38,11 +38,14 @@
 				height: 91px;
 				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 			}
+			.DL {
+				margin-bottom: 10px;
+			}
 			.version {
 				padding-top: 20px;
 				font-size: 24px;
 				color: #FFD18F;
-				font-family: 'SimSun', 'Microsoft YaHei';
+				font-family: 'Microsoft YaHei';
 			}
 			.foot {
 				width: auto;
@@ -121,11 +124,13 @@
 			methods: {
 				getURL() {
 					console.log('sd');
-					// let url = 'http://175.178.205.132:8080/user/version'
-					let url1 = 'http://43.139.124.241'
-					axios.get('http://43.139.124.241:8080/user/version').then(res => {
+					let url = 'http://175.178.205.132:8080/user/version'
+					// let testURL = 'http://43.139.124.241:8080/user/version'
+					// let url1 = 'http://43.139.124.241'
+					let url2 = 'http://175.178.205.132'
+					axios.get(url).then(res => {
 						console.log(res)
-						this.apkURL = url1 + res.data.data.apkUrl
+						this.apkURL = url2 + res.data.data.apkUrl
 						this.version = res.data.data.versionNo
 						console.log(this.apkURL)
 					}).catch(err => {
